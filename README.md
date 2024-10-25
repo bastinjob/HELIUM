@@ -27,14 +27,14 @@ The frontend is responsible for taking high-level tensor expressions and transfo
 ### 2. **Intermediate Representation (IR) - MLIR Tensor Dialect**
 Helium utilizes MLIR (Multi-Level Intermediate Representation) to define a custom **Tensor Dialect**. MLIR provides multiple levels of abstraction to represent computations, and Helium takes advantage of this to implement tensor-specific optimizations. 
 
-#### Tensor Dialect Operations:
+#### Helium Dialect Operations:
 - **`tensor.add`**: Represents element-wise addition of tensors.
 - **`tensor.mul`**: Represents element-wise multiplication of tensors.
 - **`tensor.matmul`**: Matrix multiplication operation.
 - **`tensor.transpose`**: Transposes a tensor.
 - **`tensor.reshape`**: Reshapes a tensor to a new dimension.
   
-The Tensor Dialect acts as the backbone for the entire IR transformation pipeline, allowing Helium to apply various optimization and lowering techniques.
+The Helium Dialect acts as the backbone for the entire IR transformation pipeline, allowing Helium to apply various optimization and lowering techniques.
 
 ### 3. **Optimization Passes**
 Helium’s optimizer applies a series of transformations and passes to improve the performance of tensor computations. These optimizations are designed to reduce computational complexity, memory usage, and ensure vectorization.
@@ -67,7 +67,7 @@ In the final stage, the lowered LLVM IR is translated into native machine code. 
 
 
 ## Features
-- **Tensor Dialect**: A custom MLIR dialect for tensor operations.
+- **Helium Dialect**: A custom MLIR dialect for tensor operations.
 - **Optimizations**: Includes both MLIR-based and LLVM-based optimizations.
 - **Extensibility**: Easily extend the compiler with new operations and transformations.
 - **Multi-target Support**: Generates machine code for multiple architectures (x86, ARM, etc.).
